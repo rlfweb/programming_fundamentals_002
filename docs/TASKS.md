@@ -203,12 +203,34 @@ The following questions are intended to be answered with written answers (no cod
 
 1. In what data type have we chosen to represent a book?
 
+Strings
+
 2. Is this the best data type, do you think? Could we have chosen a more appropriate data type? Why?
+
+It would be better to use an object, so we can encapsulate data and give it names such as Title, Number of pages, Author. This allows us to separate the data and perform operations on that data. 
 
 3. Take a read of the Jest Documentation about [Matchers](https://jestjs.io/docs/en/using-matchers) such as `toBe` and `toEqual`. What other matchers might come in useful? Check the tests you have written and make a list of alternative matchers which you might have been able to use.
 
+Interesting read, but run out of time for today, to go through the matchers. 
+
 4. What data types are considered "complex" data types?
+These are composite / non-primitive data types. They are: 
+Objects
+Arrays
+Functions
+Date
+Regex
 
 5. What data types are considered "primitive" data types?
+These are the standard data types James listed at the beginning of the course. They are: 
+Number
+String (a collection of characters)
+Boolean
+Null
+Undefined 
+Symbol
 
 6. In JavaScript it is possible to use `==` ("double equals") or `===` ("triple equals") to compare two values. What is the difference and why do we prefer triple equals?
+== matches the data value, so it would return 88 and "88" as equal. 
+=== matches the data value and the data type, so it would understand that 88 is a number and "88" is a string and it would not return them as equal. 
+Using === is probably best to use as it would prevent any unintentional matches. Perhaps only use == when we're sure we only want to match data value not data type.  
