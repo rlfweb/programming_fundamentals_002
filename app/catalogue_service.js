@@ -90,16 +90,25 @@ function getBooksByAuthor(author) {
   // So ...
 
 // check through the catalogue array from beginning to end, one at a time
-for (let i = 0; i < catalogue.length; i++) {
-// when you find the string that contains the author name, keep hold of it
-if (catalogue[i].filter(author)){
-// when the string doesn't contain author name, discard it
-// at the end, return a new array of all the strings that contain our particular author
-}
-return [""];
-}
-};
+
+// // USE FILTER? when you find the string that contains the author name, keep hold of it
+
+// // when the string doesn't contain author name, discard it
+
+// // at the end, return a new array of all the strings that contain our particular author
+
 //I'm going round in circles with this one. I'll move onto doing exercises from 003 and then maybe return to this if I have time on Wednesday or Thursday. 
+
+// THIS IS JAMES' SOLUTION
+  
+let books = [];  
+for(let i=0; i < catalogue.length; i++) {
+    if(catalogue[i].toLowerCase().includes(author.toLowerCase())) {
+      books.push(catalogue[i])
+    }
+  }
+  return books;
+}	
 
 
 module.exports = {
